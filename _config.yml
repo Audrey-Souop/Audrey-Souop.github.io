@@ -1,0 +1,26 @@
+# ============================================================
+# GitHub Pages — Jekyll config
+# ============================================================
+title: "Moguem Souop Audrey Cyrielle  — PhD Student | Electrical and Computer Engineering | University of Florida Specializing in Hardware Acceleration for Robotics and Computer Vision"
+description: "Portfolio professionnel : PhD Student | Electrical and Computer Engineering."
+url: "https://audrey-souop.github.io"
+baseurl: ""
+
+# Désactiver Jekyll (site HTML pur, pas de thème Jekyll)
+# Décommenter la ligne ci-dessous si tu veux un site HTML pur sans traitement Jekyll
+# plugins: []
+
+# Exclure les fichiers inutiles du build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - .git/
+
+# SEO / Social
+author: "Audrey Souop"
+lang: fr
+
+# Pas de thème Jekyll — on gère le CSS nous-mêmes
+theme: ~
