@@ -30,7 +30,7 @@
     <div class="hero-text">
       <p class="hero-label">University of Florida, United States</p>
       <h1>
-        Moguem Souop Audrey Cyrielle <br>
+        Audrey Cyrielle Moguem Souop  <br>
         <span class="hero-h1-sub">PhD Student | Electrical and Computer Engineering <br>University of Florida Specializing in Hardware Acceleration for Robotics and Computer Vision</span>
       </h1>
       <p class="subtitle">
@@ -125,17 +125,63 @@
 <section id="experiences">
   <p class="section-label">Experiences</p>
   <div class="exp-list">
+  <div class="exp-card">
+    <h3>FPGA-Accelerated Map Inflation for Robotics</h3>
+    <div class="exp-meta">Spring 2026 · FPGA Acceleration · Robotics Navigation</div>
+    <p>
+      Designed a specialized hardware accelerator to speed up map inflation, a key
+      operation in robotic navigation for collision avoidance in dynamic environments.
+      The project focused on achieving deterministic, low-latency performance for
+      safe human-robot collaboration.
+    </p>
+    <ul>
+      <li>Designed a Sparse Patch Systolic Array (SPSA) architecture for deterministic map inflation</li>
+      <li>Built a hybrid pipeline combining software-based detection with hardware-based inflation logic</li>
+      <li>Implemented and optimized the RTL using AMD Vivado and Vitis</li>
+      <li>Mapped multiplication operations to DSP primitives to reduce LUT utilization</li>
+      <li>Achieved high-frequency and low-power implementation on Spartan-7 FPGA</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">Vivado</span>
+      <span class="tag">Vitis</span><span class="tag">Spartan-7</span><span class="tag">Robotics</span>
+      <span class="tag">RTL Design</span>
+    </div>
+  </div>
+
+  <!-- 1D Convolution -->
+  <div class="exp-card">
+    <h3>FPGA-Accelerated 1-D Time-Domain Convolution</h3>
+    <div class="exp-meta">Fall 2025 · ZedBoard · Hardware-Software Co-Design</div>
+    <p>
+      Designed and implemented a custom hardware accelerator for high-speed 1-D convolution
+      on FPGA, using parallel computation and efficient buffering to outperform a
+      microprocessor-based solution.
+    </p>
+    <ul>
+      <li>Developed a parallel datapath with 128 multipliers and an adder tree</li>
+      <li>Built a custom DMA-like interface for streaming data from emulated DRAM</li>
+      <li>Implemented clock domain crossing techniques between PS and PL</li>
+      <li>Designed a sliding-window buffer to sustain high-throughput data delivery</li>
+      <li>Integrated the accelerator into a custom SoC with memory-mapped control logic</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Verilog</span><span class="tag">ZedBoard</span><span class="tag">HW/SW Co-Design</span>
+      <span class="tag">CDC</span><span class="tag">DMA</span><span class="tag">SoC</span>
+      <span class="tag">Timing Analysis</span>
+    </div>
+  </div>
+  <!-- <div class="exp-list">
 
     <div class="exp-card">
       <h3>CAMERTRONIX</h3>
-      <div class="exp-meta">Application de gestion des charges d'enseignement</div>
+      <div class="exp-meta">Fall Prevention system for Eldery Patient</div>
       <ul>
         <li>Optimize and deploy YOLOv7/YOLOv5 on Raspberry Pi 3/4 focusing on latency, size, and accuracy</li>
         <li>Implementing scene tracking using DeepSORT and the Centroid tracking method.</li>
         <li>Calibrated GoPano 360° images and stitched 2 fisheye videos into panoramic views with OpenCV and
           FFmpeg.</li>
         <!-- <li>Environnement agile · outils collaboratifs</li> -->
-      </ul>
+      <!-- </ul>
       <div class="tags">
         <span class="tag">YOLOv5-v7</span><span class="tag">Raspberry Pi</span>
         <span class="tag">OpenCV</span><span class="tag">FFmpeg</span><span class="tag">Python</span>
@@ -161,7 +207,8 @@
   </div>
   <div style="margin-top:2rem;">
     <a href="projets.html" class="btn btn-outline">See all Projects →</a>
-  </div>
+  </div> --> -->
+</div> 
 </section>
 
 <!-- ══ Key Realizations ═════════════════════════════════════ -->
