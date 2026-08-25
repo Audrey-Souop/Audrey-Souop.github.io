@@ -40,14 +40,14 @@
       <p>
         As GPU-accelerated simulators scale to multi-robot fleets, it becomes unclear
         whether performance bottlenecks originate from GPU compute or from the ROS 2/DDS
-        middleware layer — a distinction that directly affects how teams provision hardware
+        middleware layer. This distinction directly affects how teams provision hardware
         and design fleets. I designed and ran an empirical benchmark in NVIDIA Isaac Sim to
         isolate these two sources of bottleneck across fleet size and sensor load, building
         the full instrumentation pipeline from scratch.
       </p>
       <ul>
         <li>Designed a controlled sweep varying fleet size (1-3 robots) and sensor load (LiDAR, +IMU, +camera) on a ROS 2 Humble / Nav2 navigation stack</li>
-        <li>Built a Python/Bash instrumentation pipeline deriving real-time factor, per-topic DDS bandwidth/rate/jitter, and Nav2 deadline-miss rate directly from recorded simulation data</li>
+        <li>Built a Python/Bash instrumentation pipeline deriving real-time factor, per-topic DDS bandwidth/rate, and Nav2 deadline-miss rate directly from recorded simulation data</li>
         <li>Implemented process-level CPU/memory attribution across the simulator, navigation stack, and bridge processes</li>
         <li>Identified a quantified scalability breakpoint: real-time factor collapsed to 0.079 with GPU utilization pinned near 100% at maximum fleet size and sensor load, directly linking middleware-level load to degraded navigation-stack outcomes</li>
       </ul>
@@ -108,22 +108,22 @@
 
     <!-- CITI MAS Project -->
     <div class="exp-card">
-      <h3>Designing a Zero Trust Access-Control Specification for a Multi-Agent Banking Platform</h3>
-      <div class="exp-meta">2026 · AI Security Architecture · Agentic Banking Systems</div>
+      <h3>Designing a Zero Trust Access-Control Specification for a Multi-Agent  Platform</h3>
+      <div class="exp-meta">2026 · AI Security Architecture · Agentic Systems</div>
       <p>
         Banks adopting agentic AI face a control problem traditional security models
         don't cover: the agent making a decision can be manipulated through language,
         not just exploited through a code bug. As part of a team project analyzing how
         to secure a bank's multi-agent platform, I was responsible for the Zero Trust
-        specification — formally defining every agent, tool, API, and data resource in
+        specification. I formally defined every agent, tool, API, and data resource in
         the system, and the exact rules governing what each is allowed to do. This
         became the foundational artifact used to build enforcement tooling.
       </p>
       <ul>
-        <li>"Defined a complete Zero Trust specification modeling 29 agents across 3 business domains, 28 tools, 9 APIs, and 6 data resources, including their full interaction graph, trust boundaries, and identity model</li>
-        <li>Wrote 24 explicit access-control rules — session validation, prompt-injection blocking, cross-domain routing restrictions, financial-write authorization — structured around a subject/resource/action/condition/decision format consistent with the XACML standard and NIST SP 800-207 Zero Trust Architecture</li>
+        <li>Defined a complete Zero Trust specification modeling 29 agents across 3 business domains, 28 tools, 9 APIs, and 6 data resources, including their full interaction graph, trust boundaries, and identity model</li>
+        <li>Wrote 24 explicit access-control rules for session validation, prompt-injection blocking, cross-domain routing restrictions, financial-write authorization. All structured around a subject/resource/action/condition/decision format consistent with the XACML standard and NIST SP 800-207 Zero Trust Architecture</li>
         <li>Designed a risk-tiered enforcement model, scoring every action 1-5 by potential impact, so real-time authorization is reserved for the highest-risk actions (financial writes, ledger updates) while routine reads carry lighter checks</li>
-        <li>This specification was adopted as the baseline for the team's downstream Zero Trust enforcement build-out — automated resource discovery, enforcement-point generation, and a policy decision engine — later verified against real transactions on the banking backend</li>
+        <li>This specification was adopted as the baseline for the team's downstream Zero Trust enforcement build-out including automated resource discovery, enforcement-point generation, and a policy decision engine. It was later verified against real transactions on the banking backend.</li>
         <li>Built a technical presentation translating the raw specification into plain-language decision tables and system diagrams for internal review, making the security model legible to reviewers without a security background</li>
       </ul>
       <div class="tags">
